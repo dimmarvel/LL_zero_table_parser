@@ -18,7 +18,7 @@
 #define TODO_TABLE_COL_LEN 4
 #define TODO_TABLE_ROW_LEN 8
 
-static enum NONTERMINALS {
+enum NONTERMINALS {
 	STMT = 10,
 	EXPR = 11,
 	EXPR_PRIME = 12,
@@ -27,7 +27,7 @@ static enum NONTERMINALS {
 	FACT = 15
 };
 
-static enum ACTIONS {
+enum ACTIONS {
 	PLUS_ACT = 100,
 	STAR_ACT = 101
 };

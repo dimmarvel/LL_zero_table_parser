@@ -115,6 +115,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="lex_analyzer.cpp" />
+    <ClCompile Include="parser.cpp" />
+    <ClCompile Include="TableDrivenTopDownParser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lex_analyzer.h" />
+    <ClInclude Include="parser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

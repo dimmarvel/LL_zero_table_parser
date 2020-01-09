@@ -53,11 +53,9 @@ int parse_input(char* input_str)
 		}
 		else if (parse_stack[parse_stack_index] >= STMT)
 		{
-			// Îáðàáîòêà nonterminal ñèìâîëîâ
 			top_of_stack = parse_stack_pop();
 
-			parse_table_index = nonterminal_to_index(top_of_stack);
-
+			parse_table_index = nonterminal_to_index(static_cast<NONTERMINALS>(top_of_stack));
 			action = parse_table[parse_table_index][token.token];
 
 			if (action < 0)
@@ -105,9 +103,9 @@ static void init(void)
 	init_todo_table();
 }
 
-static enum NONTERMINALS index_to_nonterminal(int index)
+NONTERMINALS index_to_nonterminal(int index)
 {
-	return index + STMT;
+	return static_cast<NONTERMINALS>(index + static_cast<int>(STMT));
 }
 
 static int nonterminal_to_index(enum NONTERMINALS nonterm)

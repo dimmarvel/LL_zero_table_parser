@@ -3,6 +3,7 @@
 #define _LEX_ANALYSER_H_
 
 #include <stdlib.h>
+#include <cstring>
 
 typedef unsigned int uint;
 
