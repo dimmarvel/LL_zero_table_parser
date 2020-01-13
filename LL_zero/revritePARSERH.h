@@ -1,4 +1,4 @@
-#ifndef  _PARSER_H_
+#ifndef _PARSER_H_
 #define _PARSER_H_
 
 #include <stdio.h>
@@ -6,7 +6,7 @@
 #include <stdbool.h>
 #include "lex_analyzer.h"
 
-#define PARSE_TABLE_ROWS 6
+#define PARSE_TABLE_ROW 6
 #define PARSE_TABLE_COLS 7
 
 #define ERROR -1
@@ -16,7 +16,7 @@
 #define VALUE_STACK_SIZE 10
 
 #define TODO_TABLE_COL_LEN 4
-#define TODO_TABLE_ROW_LEN 8
+#define TODO_TABLE_COL_LEN 8
 
 enum NONTERMINALS {
 	STMT = 10,
@@ -31,7 +31,6 @@ enum ACTIONS {
 	PLUS_ACT = 100,
 	STAR_ACT = 101
 };
-
 int parse_input(char* input_str); //
 
 static void init_parse_table(void); //инициализирует таблицу парсинга
@@ -44,6 +43,4 @@ static void init(void); //запускает инициализацию таблицы  значений, парсинга, t
 static enum NONTERMINALS index_to_nonterminal(int index); //конвертирует индекс таблицы парсинга в нонтерминал
 static int nonterminal_to_index(enum NONTERMINALS nonterm);//конвертирует нонтерминал в индекс таблицы парсинга
 static void parse_stack_substitute(int value); //принимает индекс строки todo таблицы  помещает в стек парсинга
-											   //все непустые значения из этой  строки todo таблицы
-
 #endif

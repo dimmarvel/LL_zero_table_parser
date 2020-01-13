@@ -9,16 +9,18 @@ static int value_stack_index = -1;
 
 int parse_input(char* input_str)
 {
+
 	token_lexeme token;
 	int val1 = 0, val2 = 0;
 	int top_of_stack;
 	int action = 0;
 	int parse_table_index;
 
+
 	init();
 
 	set_input_stream(input_str);
-
+	
 	token = get_next_token();
 
 	if (token.token == UNKNOWN)
@@ -30,7 +32,7 @@ int parse_input(char* input_str)
 	{
 		if (parse_stack[parse_stack_index] >= PLUS_ACT)
 		{
-			// Îáðàáîòêà äåéñòâèé			
+			// обработка действий		
 			switch (parse_stack[parse_stack_index])
 			{
 			case PLUS_ACT:
