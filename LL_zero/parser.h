@@ -46,4 +46,4 @@ static int nonterminal_to_index(enum NONTERMINALS nonterm);//конвертирует нонтер
 static void parse_stack_substitute(int value); //принимает индекс строки todo таблицы  помещает в стек парсинга
 											   //все непустые значения из этой  строки todo таблицы
 
-#endif
+ #endif
