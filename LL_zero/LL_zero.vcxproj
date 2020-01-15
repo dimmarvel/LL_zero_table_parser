@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClCompile Include="lex_analyzer.cpp" />
     <ClCompile Include="parser.cpp" />
+    <ClCompile Include="rewritePARSER.cpp" />
     <ClCompile Include="TableDrivenTopDownParser.cpp" />
   </ItemGroup>
   <ItemGroup>
